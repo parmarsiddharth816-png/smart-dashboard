@@ -25,3 +25,26 @@ and hosted for free using **GitHub Pages**.
 ---
 
 ## 📁 Project Structure
+
+
+---
+
+## ▶️ How to Run
+1. Upload all files to GitHub repository  
+2. Go to **Settings → Pages**  
+3. Select **main branch / root**  
+4. Save and open the provided GitHub Pages URL
+
+---
+
+## 🔮 Future Improvements
+- Login system
+- Backend integration
+- Database support
+- Admin panel
+
+---
+
+## 👨‍💻 Author
+Smart Dashboard Project  
+Built for learning & real-world practice
