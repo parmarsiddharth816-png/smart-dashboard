@@ -1,33 +1,17 @@
-document.getElementById("chat-toggle").onclick = toggleChat;
-
-function toggleChat() {
-  document.getElementById("chatbot").classList.toggle("hidden");
-}
-
 function sendMessage() {
-  let input = document.getElementById("userInput");
-  let msg = input.value.trim();
-  if (!msg) return;
+  const input = document.getElementById("chat-input");
+  const body = document.getElementById("chat-body");
 
-  addMsg(msg, "user-msg");
+  if (!input.value.trim()) return;
+
+  const userMsg = document.createElement("div");
+  userMsg.textContent = "You: " + input.value;
+  body.appendChild(userMsg);
+
+  const botMsg = document.createElement("div");
+  botMsg.textContent = "Bot: I am your dashboard assistant 🤖";
+  body.appendChild(botMsg);
+
+  body.scrollTop = body.scrollHeight;
   input.value = "";
-
-  setTimeout(() => {
-    addMsg(aiReply(msg), "bot-msg");
-  }, 500);
-}
-
-function addMsg(text, cls) {
-  let div = document.createElement("div");
-  div.className = cls;
-  div.innerText = text;
-  chatBody.appendChild(div);
-}
-
-function aiReply(q) {
-  q = q.toLowerCase();
-  if (q.includes("revenue")) return "Revenue is $84,000";
-  if (q.includes("users")) return "Active users: 12,800";
-  if (q.includes("orders")) return "Total orders: 3,600";
-  return "Ask about revenue, users or orders";
 }
