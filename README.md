@@ -1,26 +1,18 @@
 # Smart Dashboard Website 🚀
 
-A modern animated dashboard website built using **HTML, CSS, and JavaScript**  
-and hosted for free using **GitHub Pages**.
+A modern, animated **Smart Dashboard** built using **HTML, CSS, and JavaScript**.  
+This project is fully compatible with **GitHub Pages** and works without any backend.
 
 ---
 
 ## 🌟 Features
-- Animated canvas background
-- Dashboard cards with icons
-- Clean and responsive UI
-- Fast loading static website
-- Works perfectly on Chrome
 
----
-
-## 🛠 Technologies Used
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- GSAP Animation Library
-- Canvas API
-- GitHub Pages (Hosting)
+- 📊 Animated dashboard cards
+- 🤖 AI Chatbot (frontend demo)
+- 🎙️ Voice input support
+- 🎨 Modern UI with images & videos
+- ⚡ GSAP animations (via CDN)
+- 📱 Fully responsive design
 
 ---
 
@@ -29,22 +21,24 @@ and hosted for free using **GitHub Pages**.
 
 ---
 
-## ▶️ How to Run
-1. Upload all files to GitHub repository  
-2. Go to **Settings → Pages**  
-3. Select **main branch / root**  
-4. Save and open the provided GitHub Pages URL
+## 🚀 How to Run (GitHub Pages)
+
+1. Upload all files to your GitHub repository  
+2. Go to **Settings → Pages**
+3. Select:
+   - **Branch:** `main`
+   - **Folder:** `/root`
+4. Click **Save**
+5. Open the generated GitHub Pages URL 🎉
 
 ---
 
-## 🔮 Future Improvements
-- Login system
-- Backend integration
-- Database support
-- Admin panel
+## 📦 External Libraries Used
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+
 
 ---
 
-## 👨‍💻 Author
-Smart Dashboard Project  
-Built for learning & real-world practice
