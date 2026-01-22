@@ -1,21 +1,19 @@
-const users = document.getElementById('usersCount');
-const sessions = document.getElementById('sessionsCount');
-const signups = document.getElementById('signupsCount');
+// dashboard.js
+// Dashboard logic + card hover animation
 
-function countUp(element,target,speed){
-    let current = 0;
-    let step = Math.ceil(target/speed);
-    let interval = setInterval(()=>{
-        current+=step;
-        if(current>=target){
-            element.innerText = target;
-            clearInterval(interval);
-        } else {
-            element.innerText = current;
-        }
-    },50);
-}
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Dashboard ready");
 
-countUp(users,128,50);
-countUp(sessions,75,50);
-countUp(signups,23,50);
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      card.style.transform = "translateY(-8px) scale(1.03)";
+      card.style.transition = "0.3s ease";
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "translateY(0) scale(1)";
+    });
+  });
+});
