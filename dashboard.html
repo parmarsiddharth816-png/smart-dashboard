@@ -1,45 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dashboard</title>
-<link rel="stylesheet" href="css/style.css">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav>
-  <div class="logo">SmartDash</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="dashboard.html">Dashboard</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<h2>📊 Dashboard Overview</h2>
 
-<section class="dashboard">
-  <div class="card">
-    <h3>Total Users</h3>
-    <img src="assets/images/card1.png" alt="Analytics">
-    <p id="usersCount">0</p>
-  </div>
-  <div class="card">
-    <h3>Active Sessions</h3>
-    <img src="assets/images/card2.png" alt="Tracking">
-    <p id="sessionsCount">0</p>
-  </div>
-  <div class="card">
-    <h3>New Signups</h3>
-    <img src="assets/images/card3.png" alt="Visuals">
-    <p id="signupsCount">0</p>
-  </div>
-</section>
+<div class="cards">
+  <div class="card"><img src="assets/images/card1.png"><p>Revenue</p></div>
+  <div class="card"><img src="assets/images/card2.png"><p>Users</p></div>
+  <div class="card"><img src="assets/images/card3.png"><p>Orders</p></div>
+</div>
 
-<footer>
-  &copy; 2026 Smart Dashboard. All rights reserved.
-</footer>
+<!-- CHATBOT -->
+<div id="chat-toggle">🤖</div>
 
-<script src="js/gsap.min.js"></script>
+<div id="chatbot" class="chatbot hidden">
+  <div class="chat-header">
+    AI Assistant
+    <span onclick="toggleChat()">✖</span>
+  </div>
+  <div id="chatBody" class="chat-body">
+    <div class="bot-msg">Hi 👋 Ask about revenue, users or orders</div>
+  </div>
+  <div class="chat-input">
+    <input id="userInput" placeholder="Type message">
+    <button onclick="startVoice()">🎤</button>
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
 <script src="js/dashboard.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>
