@@ -1,42 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>Smart Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<h2>📊 Dashboard Overview</h2>
+  <header class="header">
+    <h1>Smart Dashboard</h1>
+  </header>
 
-<div class="cards">
-  <div class="card"><img src="assets/images/card1.png"><p>Revenue</p></div>
-  <div class="card"><img src="assets/images/card2.png"><p>Users</p></div>
-  <div class="card"><img src="assets/images/card3.png"><p>Orders</p></div>
-</div>
+  <!-- DASHBOARD CARDS -->
+  <section class="dashboard">
+    <div class="card">
+      <img src="assets/images/card1.png" />
+      <h3>Analytics</h3>
+      <p>Traffic insights</p>
+    </div>
 
-<!-- CHATBOT -->
-<div id="chat-toggle">🤖</div>
+    <div class="card">
+      <img src="assets/images/card2.png" />
+      <h3>Users</h3>
+      <p>Active users</p>
+    </div>
 
-<div id="chatbot" class="chatbot hidden">
-  <div class="chat-header">
-    AI Assistant
-    <span onclick="toggleChat()">✖</span>
-  </div>
-  <div id="chatBody" class="chat-body">
-    <div class="bot-msg">Hi 👋 Ask about revenue, users or orders</div>
-  </div>
-  <div class="chat-input">
-    <input id="userInput" placeholder="Type message">
-    <button onclick="startVoice()">🎤</button>
+    <div class="card">
+      <img src="assets/images/card3.png" />
+      <h3>Revenue</h3>
+      <p>Growth data</p>
+    </div>
+  </section>
+
+  <!-- CHATBOT -->
+  <div id="chatbot">
+    <div id="chat-header">AI Assistant</div>
+    <div id="chat-body"></div>
+    <input id="chat-input" type="text" placeholder="Ask something..." />
     <button onclick="sendMessage()">Send</button>
+    <button onclick="startVoice()">🎤</button>
   </div>
-</div>
 
-<script src="js/dashboard.js"></script>
-<script src="js/chatbot.js"></script>
-<script src="js/voice.js"></script>
-<script src="js/theme.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- JS FILES -->
+  <script src="js/dashboard.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/voice.js"></script>
 
 </body>
 </html>
